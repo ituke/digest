@@ -30,34 +30,53 @@
 }
 
 .left-column {
-    width: 20%;
+    width: 15%;
     padding: 20px;
 }
 
 .right-column {
-    width: 80%;
+    width: 85%;
     padding: 20px;
+    line-height: 1.2;
     text-align: left;
+}
+
+/* リストアイテムの間にマージンを追加 */
+.right-column ul li {
+    margin-bottom: 50px; /* 下に20pxのマージンを追加 */
+}
+
+/* 記事全体のマージンを追加 */
+.right-column article {
+    margin-bottom: 20px; /* 記事全体の下に20pxのマージンを追加 */
 }
 
 article {
     text-align: left; /* テキストを中央揃えに設定 */
-    line-height: 0.7;
+    line-height: 0.4;
+}
+
+article p {
+    font-size: 0.9em; /* フォントサイズを小さく */
+}
+
+article h3 a, article p {
+    line-height: 0.0;
 }
 
 /* リンクの色を黒に固定 */
-article h3 a, article p a {
+article h3 a, article span a {
     color: #000; /* リンクの色を黒に設定 */
     text-decoration: none; /* 下線を消す */
 }
 
 /* ホバー時のスタイル */
-article h3 a:hover, article p a:hover {
+article h3 a:hover, article span a:hover  {
     color: #333; /* ホバー時の色を少し濃い黒に設定 */
     text-decoration: underline; /* ホバー時に下線を表示 */
 }
 
 /* 訪問済みリンクの色を黒に固定 */
-article h3 a:visited, article p a:visited {
+article h3 a:visited, article span a:visited {
     color: #000; /* 訪問済みリンクの色も黒に設定 */
 }
