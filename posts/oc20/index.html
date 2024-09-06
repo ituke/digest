@@ -13,18 +13,18 @@
     <div class="article-content">
         <h1 id="open-catalyst-2020-oc20-dataset-and-community-challenges">Open Catalyst 2020 (OC20) Dataset and Community Challenges</h1>
 <ul>
-<li><a href="https://pubs.acs.org/doi/10.1021/acscatal.0c04525"><em>ACS Catal.</em>, <strong>2021</strong>, 11, 6059</a></li>
+<li><a href="https://pubs.acs.org/doi/10.1021/acscatal.0c04525"><em>ACS Catal</em>, <strong>2021</strong>, <em>11</em>, 6059.</a></li>
 <li>Lowik Chanussot, Abhishek Das, Siddharth Goyal, Thibaut Lavril, Muhammed Shuaibi, Morgane Riviere, Kevin Tran, Javier Heras-Domingo, Caleb Ho, Weihua Hu, Aini Palizhati, Anuroop Sriram, Brandon Wood, Junwoong Yoon, Devi Parikh, C. Lawrence Zitnick*, and Zachary Ulissi*</li>
 </ul>
-<h2 id="なぜこの論文を選んだ">なぜこの論文を選んだ？</h2>
+<h2 id="なぜこの論文を選んだ">なぜこの論文を選んだ</h2>
 <p>既存の触媒データベースとその利用の具体例について知る必要があったため。</p>
-<h2 id="どんなもの">どんなもの？</h2>
+<h2 id="どんなもの">どんなもの</h2>
 <p>触媒開発の需要は、循環型社会実現の要請が高まるに比例して大きくなりつつある。近年では、計算機支援による触媒開発が精力的に取り組まれるが、既存のデータセットの小ささから固体触媒一般に適用可能な機械学習モデルの構築が困難であった。<br>
 そこで、本論文では数多くの個体触媒と吸着子について、それらの吸着構造を大量に作成しデータベース化した。これによる、グラフニューラルネットワークモデルの学習を通したデータベース利用と、データ数の重要さについて議論がなされている。</p>
-<h2 id="先行研究と比べてどこがすごい">先行研究と比べてどこがすごい？</h2>
+<h2 id="先行研究と比べて">先行研究と比べて</h2>
 <p>Materials Project のデータベースを用いて幅広い空間を網羅しうる、触媒-吸着子のデータセットを作成した。さらに、DFT 計算による 120 万構造の構造最適化、および 2,500 万構造の一点計算を行った。これらのデータを機械学習モデルの構築に利用した。<br>
 構造の作成においては、広く研究の対象となる組成や吸着分子に絞ることで、より有益なデータの蓄積を試みている。機械学習モデルの構築については、様々なアプローチ・評価手法を提案し、それらの比較検討を行なっている。</p>
-<h2 id="技術や手法のキモはどこ">技術や手法のキモはどこ？</h2>
+<h2 id="技術や手法のキモ">技術や手法のキモ</h2>
 <h3 id="構造作成">構造作成</h3>
 <p>４つのステップを介して多様な構造の作成に至った。<br>
 (1) 吸着子の選別<br>
@@ -51,7 +51,7 @@ VASPで構造最適化した。収束しなかった構造は除外した。ま�
 <p>以上のタスクは、初期構造からエネルギーを予測することを最終目標としている。以下の模式図がその流れである。</p>
 <p><br>
 <img src="https://pubs.acs.org/cms/10.1021/acscatal.0c04525/asset/images/medium/cs0c04525_0004.gif" alt=""></p>
-<h2 id="どうやって有効だと検証した">どうやって有効だと検証した？</h2>
+<h2 id="どうやって有効だと検証した">どうやって有効だと検証した</h2>
 <p>上の３つのタスクを様々な指標で精度の検証に取り組んだ。以下にその指標を並べる。<br>
 (1) Energy MAE (Mean Absolute Error): エネルギーのMAE<br>
 (2) Force MAE<br>

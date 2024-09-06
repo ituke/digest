@@ -4,7 +4,7 @@
     padding: 20px; /* 内側の余白を追加 */
 }
 
-h1, h2, h3, h4 {
+h1, h2 {
     text-align: center; /* 見出しを中央揃えに */
 }
 
