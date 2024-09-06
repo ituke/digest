@@ -18,6 +18,14 @@
     z-index: 2; /* オーバーレイとしての z-index */
 }
 
+.text-overlay h3 {
+    font-size: 1.0em /* フォントサイズを大きく */
+}
+
+.text-overlay p {
+    font-size: 0.8em /* フォントサイズを大きく */
+}
+
 .header-info h1, .header-info h2, .header-info h3, .header-info p {
     margin: 0; /* マージンをゼロに */
 }

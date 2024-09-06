@@ -26,6 +26,10 @@ li {
     text-align: center; /* リストアイテムを中央揃えに */
 }
 
+h1 {
+    text-align: center; /* 見出しを中央揃えに */
+}
+
 article h3 {
     color: #0056b3; /* タイトルの色 */
     text-align: center; /* 見出しを中央揃えに */
