@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/css/digest_style.css"> 
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<head>
+    
+</head>
+<body>
+    <div class="article-content">
+        <h1 id="open-catalyst-2020-oc20-dataset-and-community-challenges">Open Catalyst 2020 (OC20) Dataset and Community Challenges</h1>
+<ul>
+<li><a href="https://pubs.acs.org/doi/10.1021/acscatal.0c04525"><em>ACS Catal.</em>, <strong>2021</strong>, 11, 6059</a></li>
+<li>Lowik Chanussot, Abhishek Das, Siddharth Goyal, Thibaut Lavril, Muhammed Shuaibi, Morgane Riviere, Kevin Tran, Javier Heras-Domingo, Caleb Ho, Weihua Hu, Aini Palizhati, Anuroop Sriram, Brandon Wood, Junwoong Yoon, Devi Parikh, C. Lawrence Zitnick*, and Zachary Ulissi*</li>
+</ul>
+<h2 id="なぜこの論文を選んだ">なぜこの論文を選んだ？</h2>
+<p>既存の触媒データベースとその利用の具体例について知る必要があったため。</p>
+<h2 id="どんなもの">どんなもの？</h2>
+<p>触媒開発の需要は、循環型社会実現の要請が高まるに比例して大きくなりつつある。近年では、計算機支援による触媒開発が精力的に取り組まれるが、既存のデータセットの小ささから固体触媒一般に適用可能な機械学習モデルの構築が困難であった。<br>
+そこで、本論文では数多くの個体触媒と吸着子について、それらの吸着構造を大量に作成しデータベース化した。これによる、グラフニューラルネットワークモデルの学習を通したデータベース利用と、データ数の重要さについて議論がなされている。</p>
+<h2 id="先行研究と比べてどこがすごい">先行研究と比べてどこがすごい？</h2>
+<p>Materials Project のデータベースを用いて幅広い空間を網羅しうる、触媒-吸着子のデータセットを作成した。さらに、DFT 計算による 120 万構造の構造最適化、および 2,500 万構造の一点計算を行った。これらのデータを機械学習モデルの構築に利用した。<br>
+構造の作成においては、広く研究の対象となる組成や吸着分子に絞ることで、より有益なデータの蓄積を試みている。機械学習モデルの構築については、様々なアプローチ・評価手法を提案し、それらの比較検討を行なっている。</p>
+<h2 id="技術や手法のキモはどこ">技術や手法のキモはどこ？</h2>
+<h3 id="構造作成">構造作成</h3>
+<p>４つのステップを介して多様な構造の作成に至った。<br>
+(1) 吸着子の選別<br>
+(2) 表面（触媒）の選別<br>
+(3) 初期構造の作成<br>
+(4) 構造最適化<br>
+である。</p>
+<p>(1) 吸着子の選別<br>
+再生可能エネルギーへの利用を考慮した際に前途有望な82の分子セットを用意し、ランダムに選択。</p>
+<p>(2) 表面（触媒）の選別<br>
+合計 11,451 個の固体材料を Material Projects から用意し、ここから 5 % の単元材料、30 % の二元材料、および 65 % の三元材料が採択されるようにして選択。この比率は応用を見据えた際の重要度から決定している。</p>
+<p>(3) 初期構造の作成<br>
+重心に位置する原子の真上にある表面原子からz軸方向に 2 Å の位置に吸着子を配置。この時、ボロノイ分割によって配位環境を計算し配位数が通常より少なくなるように制限している。さらに、吸着子が表面原子といくつ結合を形成しているかを確認し、それぞれにラベリングし別の構造として扱っている。</p>
+<p>(4) 構造最適化<br>
+VASPで構造最適化した。収束しなかった構造は除外した。またモデルの訓練に使うデータのために、MDを900Kで2fs流した構造や、ASEでランダムに原子位置を乱した構造を作成した。MDおよび乱れた構造は構造最適化後の構造を使用している。最終的には、95万のMD構造、3000万の乱した構造が得られており、一点計算でエネルギーと力を算出したデータは6400万に登っている。</p>
+<p><br>
+<img src="https://pubs.acs.org/cms/10.1021/acscatal.0c04525/asset/images/medium/cs0c04525_0003.gif" alt=""></p>
+<h3 id="様々なタスクに向けた機械学習モデルの構築">様々なタスクに向けた機械学習モデルの構築</h3>
+<p>３種類の GNN でトライ。Crystal Graph Conventional NN (CGCNN)、SchNet、および DimeNet++。<br>
+計算コストの高い DFT 計算を省略すべく、またその手法をより一般な構造へ適用可能にすることを目指し、多様な構造を含むこのデータベースを利用した以下のタスクに挑んだ。</p>
+<p>(1) Structure to Energy and Forces (S2EF)<br>
+(2) Initial Structure to Relaxed Structure (IS2RS)<br>
+(3) Initial Structure to Relaxed Energy (IS2RE)</p>
+<p>以上のタスクは、初期構造からエネルギーを予測することを最終目標としている。以下の模式図がその流れである。</p>
+<p><br>
+<img src="https://pubs.acs.org/cms/10.1021/acscatal.0c04525/asset/images/medium/cs0c04525_0004.gif" alt=""></p>
+<h2 id="どうやって有効だと検証した">どうやって有効だと検証した？</h2>
+<p>上の３つのタスクを様々な指標で精度の検証に取り組んだ。以下にその指標を並べる。<br>
+(1) Energy MAE (Mean Absolute Error): エネルギーのMAE<br>
+(2) Force MAE<br>
+(3) Force Cosine: 力の向きの誤差を、それぞれの角度の差のコサインで定量化したもの<br>
+(4) EFwT (Energy and Force within Threshold): 外れ値を無視するために、閾値以下の誤差を持つものの割合<br>
+(5) ADwT (Average Distance within Threshold): 外れ値を無視した原子位置のMAE (IS2RSで使用)<br>
+(6) FbT (Force below Threshold)<br>
+(7) AFbT (Average FbT)</p>
+<p>結果として、CGCNNの性能は残りの二つに比較して劣っていた。SchNet、および DimeNet++ は、タスクや指標によってその性能の優劣が逆転した。<br>
+またデータ数については、データが多ければ多いほどその性能は高くなり、NLPや画像生成にある現象に似ていると言及されていた(この論文が執筆された2020年時点での議論)。\</p>
+<p><img src="https://pubs.acs.org/cms/10.1021/acscatal.0c04525/asset/images/medium/cs0c04525_0007.gif" alt=""></p>
+<p>重要な結果として、IS2RE（初期構造からいきなりエネルギーを予測するタスク）が最も精度がよかったという。</p>
+
+    </div>
+</body>
+</html>

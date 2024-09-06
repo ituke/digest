@@ -1,1 +1,1 @@
-[Deployed site](https://ituke.github.io/digest/)
+[Deployed site](https://ituke.github.io/digest)
