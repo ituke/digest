@@ -1,0 +1,63 @@
+.header-info {
+    position: relative; /* 相対位置 */
+    background-image: url('/images/paper_texture.jpg'); /* 背景画像を設定 */
+    background-size: cover; /* 背景画像をカバーとして設定 */
+    background-position: center; /* 背景画像を中央に設定 */
+    color: #333; /* テキストの色を暗めに設定 */
+    text-align: center;
+    padding: 50px 20px; /* パディングを調整 */
+    z-index: 1; /* 背景としての z-index */
+}
+
+.text-overlay {
+    position: relative;
+    display: inline-block; /* テキストの幅に合わせる */
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.7); /* 白色で透明度70% */
+    color: #333; /* テキストの色を設定 */
+    z-index: 2; /* オーバーレイとしての z-index */
+}
+
+.header-info h1, .header-info h2, .header-info h3, .header-info p {
+    margin: 0; /* マージンをゼロに */
+}
+
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.left-column {
+    width: 20%;
+    padding: 20px;
+}
+
+.right-column {
+    width: 80%;
+    padding: 20px;
+    text-align: left;
+}
+
+article {
+    text-align: left; /* テキストを中央揃えに設定 */
+    line-height: 0.7;
+}
+
+/* リンクの色を黒に固定 */
+article h3 a, article p a {
+    color: #000; /* リンクの色を黒に設定 */
+    text-decoration: none; /* 下線を消す */
+}
+
+/* ホバー時のスタイル */
+article h3 a:hover, article p a:hover {
+    color: #333; /* ホバー時の色を少し濃い黒に設定 */
+    text-decoration: underline; /* ホバー時に下線を表示 */
+}
+
+/* 訪問済みリンクの色を黒に固定 */
+article h3 a:visited, article p a:visited {
+    color: #000; /* 訪問済みリンクの色も黒に設定 */
+}
