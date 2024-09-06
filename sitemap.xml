@@ -2,17 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://example.org/</loc>
+    <loc>https://ituke.github.io/digest/</loc>
     <lastmod>2024-09-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.org/posts/</loc>
+    <loc>https://ituke.github.io/digest/posts/</loc>
     <lastmod>2024-09-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.org/posts/bronsted/</loc>
+    <loc>https://ituke.github.io/digest/posts/bronsted/</loc>
     <lastmod>2024-09-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.org/categories/</loc>
+    <loc>https://ituke.github.io/digest/categories/</loc>
   </url><url>
-    <loc>https://example.org/tags/</loc>
+    <loc>https://ituke.github.io/digest/tags/</loc>
   </url>
 </urlset>
