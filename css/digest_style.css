@@ -1,5 +1,5 @@
 body {
-    font-family: 'Helvetica', sans-serif, 'Roboto', 'Arial';
+    font-family: 'Helvetica', sans-serif, 'Roboto', 'Arial' !important;
 }
 
 .home-button {

@@ -1,5 +1,5 @@
 body {
-    font-family: 'Helvetica', sans-serif, 'Roboto', 'Arial';
+    font-family: 'Helvetica', sans-serif, 'Roboto', 'Arial' !important;
 }
 
 .header-info, .text-overlay, .container, .left-column, .right-column, article {
