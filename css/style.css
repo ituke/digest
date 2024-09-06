@@ -1,9 +1,5 @@
 body {
-    font-family: 'Arial', sans-serif; /* Arial フォントを指定 */
-    color: #333; /* テキスト全体の色を設定 */
-    line-height: 1.6; /* 全体の行間を設定 */
-    margin: 0; /* 全体のマージンをリセット */
-    padding: 0; /* 全体のパディングをリセット */
+    font-family: 'Arial', 'Helvetica', sans-serif; /* 複数のフォントを指定 */
 }
 
 .header-info, .text-overlay, .container, .left-column, .right-column, article {
