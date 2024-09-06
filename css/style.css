@@ -87,16 +87,20 @@ article span a, article span {
 /* リンクの色を黒に固定 */
 article h3 a, article span a {
     color: #000; /* リンクの色を黒に設定 */
+    text-decoration: none; /* 通常時は下線を消す */
+    border-bottom: 2px solid transparent; /* 初期状態では透明なボーダー */
+    padding-bottom: 2px;
+    transition: border-bottom 0.2s, text-decoration 0.2s; /* ボーダーと下線のアニメーション */
 }
 
 /* ホバー時のスタイル */
-article h3 a:hover, article span a:hover  {
-    color: #333; /* ホバー時の色を少し濃い黒に設定 */
+article h3 a:hover, article span a:hover {
     text-decoration: underline; /* ホバー時に下線を表示 */
+    border-bottom: 2px solid transparent; /* ボーダーを表示させない */
 }
 
 /* 訪問済みリンクの色を黒に固定 */
 article h3 a:visited, article span a:visited {
     color: #000; /* 訪問済みリンクの色も黒に設定 */
+    text-decoration: none; /* 訪問済みでも通常時は下線を消す */
 }
-
