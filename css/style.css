@@ -50,6 +50,7 @@ body {
     white-space: nowrap;
     width: 15%;
     padding: 20px;
+    line-height: 1;
     font-size: 0.8em;
 }
 
