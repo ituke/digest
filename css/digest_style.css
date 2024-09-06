@@ -4,6 +4,8 @@
     padding: 20px;
     flex-direction: column; /* 項目を垂直方向に並べる */
     align-items: center; /* 横方向の中心揃え */
+    max-width: 80%; /* 全体の幅を80%に設定（左右に10%ずつ空白） */
+    margin: 0 auto; /* 中央揃え */
 }
 
 .left-column, .right-column {
@@ -49,4 +51,12 @@ article p {
     font-size: 0.9em; /* フォントサイズを小さく */
     color: #666; /* フォントの色 */
     text-align: center; /* 段落を中央揃えに */
+}
+
+/* モバイルデバイス向けのスタイル調整 */
+@media screen and (max-width: 768px) {
+    .container {
+        max-width: 100%; /* モバイルではコンテナを100%に設定 */
+        padding: 10px; /* モバイルでのパディングを調整 */
+    }
 }
