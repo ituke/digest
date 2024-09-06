@@ -43,5 +43,6 @@ p {
     p {
         font-size: 1em; /* モバイルでの段落フォントサイズを調整 */
         line-height: 1.4; /* モバイルでの行間を調整 */
+        text-align: justify; /* 段落を左揃えに */
     }
 }
