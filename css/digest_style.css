@@ -1,3 +1,10 @@
+body {
+    font-family: Arial, sans-serif; /* Arial系のフォントを全体に適用 */
+    line-height: 1.6; /* デフォルトの行間を少し広げる */
+    margin: 0;
+    padding: 0;
+}
+
 .home-button {
     display: inline-block;
     padding: 10px 20px;
@@ -74,18 +81,4 @@ p {
     font-size: 1.2em; /* フォントサイズを小さく */
     line-height: 1.5; /* 行間を調整して読みやすく */
     text-align: justify; /* 段落を左揃えに */
-}
-
-/* モバイルデバイス向けのスタイル調整 */
-@media screen and (max-width: 768px) {
-    .article-content {
-        max-width: 100%; /* モバイルではコンテナを100%に設定 */
-        padding: 10px; /* モバイルでのパディングを調整 */
-    }
-
-    p {
-        font-size: 1em; /* モバイルでの段落フォントサイズを調整 */
-        line-height: 1.4; /* モバイルでの行間を調整 */
-        text-align: justify; /* 段落を左揃えに */
-    }
 }
