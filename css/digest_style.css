@@ -1,62 +1,41 @@
-.container {
-    display: flex;
-    justify-content: center; /* コンテンツを中央に配置 */
-    padding: 20px;
-    flex-direction: column; /* 項目を垂直方向に並べる */
-    align-items: center; /* 横方向の中心揃え */
-    max-width: 80%; /* 全体の幅を80%に設定（左右に10%ずつ空白） */
-    margin: 0 auto; /* 中央揃え */
+.article-content {
+    max-width: 80%; /* 全体の幅を80%に設定（左右に10%の空白） */
+    margin: 0 auto; /* コンテンツを中央に配置 */
+    padding: 20px; /* 内側の余白を追加 */
 }
 
-.left-column, .right-column {
-    width: 100%; /* 両カラムを100%の幅に設定 */
-    padding: 20px;
-    text-align: center; /* テキストを中央揃えに */
+h1, h2, h3, h4 {
+    text-align: center; /* 見出しを中央揃えに */
 }
 
 ul {
     list-style-type: none; /* リストマーカーを非表示に */
     padding: 0;
-    width: 100%; /* ul全体の幅を100%に設定 */
-    align-items: center;
+    text-align: center; /* リスト全体を中央揃えに */
 }
 
 li {
     margin-bottom: 15px; /* 各リストアイテムの間隔 */
     border-bottom: 1px solid #ccc; /* 下線を追加 */
     padding-bottom: 10px;
-    text-align: center; /* リストアイテムを中央揃えに */
 }
 
-h1 {
-    text-align: center; /* 見出しを中央揃えに */
-}
-
-article h3 {
-    color: #0056b3; /* タイトルの色 */
-    text-align: center; /* 見出しを中央揃えに */
-}
-
-article h3 a {
-    text-decoration: none; /* 下線を消す */
-    align-items: center;
-}
-
-article h3 a:hover {
-    text-decoration: underline; /* ホバー時に下線を表示 */
-    align-items: center;
-}
-
-article p {
+p {
     font-size: 0.9em; /* フォントサイズを小さく */
     color: #666; /* フォントの色 */
-    text-align: center; /* 段落を中央揃えに */
+    line-height: 1.5; /* 行間を調整して読みやすく */
+    text-align: left; /* 段落を左揃えに */
 }
 
 /* モバイルデバイス向けのスタイル調整 */
 @media screen and (max-width: 768px) {
-    .container {
+    .article-content {
         max-width: 100%; /* モバイルではコンテナを100%に設定 */
         padding: 10px; /* モバイルでのパディングを調整 */
+    }
+
+    p {
+        font-size: 1em; /* モバイルでの段落フォントサイズを調整 */
+        line-height: 1.4; /* モバイルでの行間を調整 */
     }
 }
