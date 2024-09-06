@@ -1,5 +1,5 @@
 body {
-    font-family: 'Arial', 'Helvetica', sans-serif; /* 複数のフォントを指定 */
+    font-family: 'Helvetica', sans-serif, 'Roboto', 'Arial';
 }
 
 .header-info, .text-overlay, .container, .left-column, .right-column, article {
