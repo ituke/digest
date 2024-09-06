@@ -47,6 +47,7 @@ body {
 
 .left-column {
     text-align: center;
+    white-space: nowrap;
     width: 15%;
     padding: 20px;
     font-size: 0.9em;
