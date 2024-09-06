@@ -8,6 +8,11 @@ h1, h2 {
     text-align: center; /* 見出しを中央揃えに */
 }
 
+h1 {
+    text-align: center; /* 見出しを中央揃えに */
+    font-size: 1.5em; 
+}
+
 ul {
     list-style-type: none; /* リストマーカーを非表示に */
     padding: 0;
@@ -18,13 +23,14 @@ li {
     margin-bottom: 15px; /* 各リストアイテムの間隔 */
     border-bottom: 1px solid #ccc; /* 下線を追加 */
     padding-bottom: 10px;
+    font-size: 0.5cm;
+    line-height: 1.2;
 }
 
 p {
-    font-size: 0.9em; /* フォントサイズを小さく */
-    color: #666; /* フォントの色 */
+    font-size: 1.2em; /* フォントサイズを小さく */
     line-height: 1.5; /* 行間を調整して読みやすく */
-    text-align: left; /* 段落を左揃えに */
+    text-align: justify; /* 段落を左揃えに */
 }
 
 /* モバイルデバイス向けのスタイル調整 */
