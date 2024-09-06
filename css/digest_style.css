@@ -2,6 +2,16 @@
     max-width: 80%; /* 全体の幅を80%に設定（左右に10%の空白） */
     margin: 0 auto; /* コンテンツを中央に配置 */
     padding: 20px; /* 内側の余白を追加 */
+    font: Arial, sans-serif; /* フォントを指定 */
+}
+
+/* article-content 全体にグレーの背景を設定 */
+.article-content h1 {
+    background-color: #d6d2d2; /* グレーの背景色 */
+    border-bottom: 3px solid #d6d2d2; /* 下線を追加 */
+    padding: 20px; /* 内側に余白を追加 */
+    margin-bottom: 20px; /* 下に余白を追加 */
+    border-radius: 20px; /* 角を少し丸める（任意） */
 }
 
 h1, h2 {
@@ -21,11 +31,27 @@ ul {
 
 li {
     margin-bottom: 15px; /* 各リストアイテムの間隔 */
-    border-bottom: 1px solid #ccc; /* 下線を追加 */
+    border-bottom: 3px solid #d6d2d2; /* 下線を追加 */
     padding-bottom: 10px;
-    font-size: 0.5cm;
+    font-size: 0.45cm;
     line-height: 1.2;
 }
+
+/* リンク関連設定 */
+li a:visited {
+    color: #000; /* 訪問済みリンクの色も黒に設定 */
+}
+li a {
+    text-decoration: none; /* 下線を消す */
+    color: #007BFF; /* リンクの色を青にする */
+    border-bottom: 2px solid transparent; /* 初期状態では透明なボーダー */
+    padding-bottom: 2px;
+    transition: border-bottom 0.2s; /* ボーダーのアニメーション */
+}
+li a:hover {
+    border-bottom: 2px solid #007BFF; /* ホバー時にボーダーを表示 */
+}
+
 
 p {
     font-size: 1.2em; /* フォントサイズを小さく */
