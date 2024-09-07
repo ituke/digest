@@ -27,11 +27,13 @@ body {
 }
 
 .text-overlay h3 {
-    font-size: 1.0em /* フォントサイズを大きく */
+    font-size: 1.0em; /* フォントサイズを大きく */
+    color: #6e6e6e; /* テキストの色を設定 */
 }
 
 .text-overlay p {
-    font-size: 0.8em /* フォントサイズを大きく */
+    font-size: 0.8em; /* フォントサイズを大きく */
+    color: #6e6e6e; /* テキストの色を設定 */
 }
 
 .header-info h1, .header-info h2, .header-info h3, .header-info p {
