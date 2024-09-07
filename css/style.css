@@ -44,7 +44,6 @@ body {
 .container {
     display: flex;
     justify-content: space-between;
-    padding: 20px;
     align-items: flex-start; /* 両カラムの頭を揃える */
 }
 
@@ -52,14 +51,15 @@ body {
     text-align: right;
     white-space: nowrap;
     width: 15%;
-    padding: 0px;
-    line-height: 1.5;
+    padding: 7.5px; /* 右カラムと同じにする */
+    line-height: 1.7; /* 行間を調整 */
+    font-size: 0.8em; /* フォントサイズを小さく */
 }
 
 .right-column {
     width: 85%;
-    padding: 10px;
-    line-height: 1;
+    padding: 7.5px;
+    line-height: 1.2;
     text-align: left;
 }
 
