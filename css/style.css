@@ -43,20 +43,20 @@ body {
     display: flex;
     justify-content: space-between;
     padding: 20px;
+    align-items: flex-start; /* 両カラムの頭を揃える */
 }
 
 .left-column {
     text-align: right;
     white-space: nowrap;
     width: 15%;
-    padding: 20px;
-    line-height: 1;
-    font-size: 0.8em;
+    padding: 0px;
+    line-height: 1.5;
 }
 
 .right-column {
     width: 85%;
-    padding: 20px;
+    padding: 10px;
     line-height: 1;
     text-align: left;
 }
